@@ -3,7 +3,7 @@
 ## 🚀İçindekiler
 - [Tanıtım](#tanıtım)
 - [Proje Videosu](#proje-videosu)
-- [Proje Tema Dosyaları](#proje-tema-dosyalari)
+- [Proje Tema Dosyaları](#proje-tema-dosyaları)
 - [Kullanılan Teknolojiler](#kullanılan-teknolojiler)
 - [Katmanlar](#katmanlar)
 
@@ -14,6 +14,6 @@
 
 
 ## Proje Tema Dosyaları
-☑️ Arayüz -> https://templateflip.com/templates/super-folio/
-☑️ Admin Paneli -> https://github.com/BootstrapDash/corona-free-dark-bootstrap-admin-template
-☑️ Kullanıcı Arayüzü -> https://www.bootstrapdash.com/product/skydash-admin-template
+☑️ Arayüz -> https://templateflip.com/templates/super-folio/ <br>
+☑️ Admin Paneli -> https://github.com/BootstrapDash/corona-free-dark-bootstrap-admin-template <br>
+☑️ Kullanıcı Arayüzü -> https://www.bootstrapdash.com/product/skydash-admin-template <br>
