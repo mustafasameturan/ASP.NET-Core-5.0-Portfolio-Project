@@ -4,7 +4,7 @@
 - [Tanıtım](#tanıtım)
 - [Proje Videosu](#proje-videosu)
 - [Proje Tema Dosyaları](#proje-tema-dosyaları)
-- [Kullanılan Teknolojiler](#kullanılan-teknolojiler)
+- [Kullanılan Teknolojiler](#kullanılan-teknolojiler-ve-yapılar)
 - [Katmanlar](#katmanlar)
 
 ## Tanıtım
@@ -17,3 +17,24 @@
 ☑️ Arayüz -> https://templateflip.com/templates/super-folio/ <br>
 ☑️ Admin Paneli -> https://github.com/BootstrapDash/corona-free-dark-bootstrap-admin-template <br>
 ☑️ Kullanıcı Arayüzü -> https://www.bootstrapdash.com/product/skydash-admin-template <br>
+
+## Kullanılan Teknolojiler ve Yapılar
+☑️ Katmanlı Mimari
+☑️ Generic Yapılar
+☑️ Entity Framework
+☑️ Autfac -> IoC Container
+☑️ MVC
+☑️ Migrations
+☑️ Fluent Validation
+☑️ Identity
+☑️ Area
+☑️ Toastr
+☑️ MSSQL
+
+## Katmanlar
+🗃 [Business](https://github.com/mustafasameturan/ASP.NET-Core-5.0-Portfolio-Project/tree/master/Business) <br>
+🗃 [DataAccess](https://github.com/mustafasameturan/ASP.NET-Core-5.0-Portfolio-Project/tree/master/DataAccess) <br>
+🗃 [Entity](https://github.com/mustafasameturan/ASP.NET-Core-5.0-Portfolio-Project/tree/master/Entities) <br>
+🗃 [UI](https://github.com/mustafasameturan/ASP.NET-Core-5.0-Portfolio-Project/tree/master/CorePortfolio) <br>
+
+
