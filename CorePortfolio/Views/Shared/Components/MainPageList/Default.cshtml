@@ -1,0 +1,31 @@
+﻿@using Entities.Concrete
+@model List<MainPage>
+
+<header>
+    <div class="cover bg-light">
+        <div class="container px-3">
+            @foreach (var item in Model)
+            {
+                <div class="row">
+                    <div class="col-lg-6 p-2"><img class="img-fluid" src="@item.ImageUrl" alt="hello" /></div>
+                    <div class="col-lg-6">
+                        <div class="mt-5">
+                            <p class="lead text-uppercase mb-1">@item.Header</p>
+                            <h1 class="intro-title marker" data-aos="fade-left" data-aos-delay="50">@item.Name</h1>
+                            <p class="lead fw-normal mt-3" data-aos="fade-up" data-aos-delay="100">@item.Title</p>
+                            <div class="social-nav" data-aos="fade-up" data-aos-delay="200">
+                                <nav role="navigation">
+                                    <ul class="nav justify-content-left">
+                                        @await Component.InvokeAsync("SocialMediaList")
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="mt-3" data-aos="fade-up" data-aos-delay="200"><a class="btn btn-primary shadow-sm mt-1 hover-effect" href="#contact">@sharedResource["contactMe"] <i class="fas fa-arrow-right"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="wave-bg"></div>
+</header>

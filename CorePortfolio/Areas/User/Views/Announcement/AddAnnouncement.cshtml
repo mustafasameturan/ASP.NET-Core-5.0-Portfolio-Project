@@ -1,0 +1,54 @@
+﻿@model Entities.Concrete.Announcement
+
+@{
+    ViewData["Title"] = "AddAnnouncement";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@sharedResource["makeAnAnnouncement"]</h4>
+            <form class="forms-sample" method="post" action="/User/Announcement/AddAnnouncement">
+                <div class="form-group">
+                    <label>@sharedResource["announcementTitle"]</label>
+                    <input type="text" class="form-control" name="Title" placeholder="@sharedResource["announcementTitle"]">
+                    @Html.ValidationMessageFor(x => x.Title, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["name"]</label>
+                    <input type="text" class="form-control" name="Name" placeholder="@ViewBag.v1">
+                    @Html.ValidationMessageFor(x => x.Name, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["surname"]</label>
+                    <input type="text" class="form-control" name="Surname" placeholder="@ViewBag.v2">
+                    @Html.ValidationMessageFor(x => x.Surname, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["date"]</label>
+                    <input type="text" class="form-control" name="Date" placeholder="@DateTime.Now.ToShortDateString()">
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["announcementType"]</label>
+                    <select class="form-control" name="Status">
+                        <option>Yeni Yazı</option>
+                        <option>Konferans</option>
+                        <option>Yeni Video</option>
+                        <option>Gezi Duyurusu</option>
+                        <option>Bootcamp</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["anno"]</label>
+                    <textarea class="form-control" name="Content" rows="4" placeholder="@sharedResource["anno"]"></textarea>
+                    @Html.ValidationMessageFor(x => x.Content, "", new { @class = "text-danger" })
+                </div>
+                <a href="/User/Announcement/Index/" class="btn btn-light float-lg-right">@sharedResource["cancel"]</a>
+                <button type="submit" class="btn btn-primary mr-2 float-lg-right">@sharedResource["save"]</button>
+            </form>
+        </div>
+    </div>
+</div>
+

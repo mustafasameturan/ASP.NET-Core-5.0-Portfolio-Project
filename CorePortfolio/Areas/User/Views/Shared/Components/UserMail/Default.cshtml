@@ -1,0 +1,13 @@
+﻿@using Entities.Concrete
+@model IEnumerable<SystemUser>
+
+    <select class="form-control" name="Receiver">
+
+        <option hidden disabled selected>@sharedResource["chooseUser"]</option>        
+        @foreach (var item in Model)
+        {
+            <option>@item.Email</option>
+        }
+    </select>
+
+

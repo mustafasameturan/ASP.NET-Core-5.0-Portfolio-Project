@@ -1,0 +1,81 @@
+﻿@model PortfolioCoreProject.Areas.User.Models.UserRegisterViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Html.PartialAsync("/Views/Admin/HeadPartial.cshtml")
+
+
+<body>
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+            <div class="row w-100 m-0">
+                <div class="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg">
+                    <div class="card col-lg-4 mx-auto">
+                        <div class="card-body px-5 py-5">
+                            <h3 class="card-title text-left mb-3">@sharedResource["register"]</h3>
+                            <form method="post">
+                                <div class="form-group">
+                                    <label>@sharedResource["yourName"]</label>
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                    <input type="text" asp-for="Name" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>@sharedResource["yourSurname"]</label>
+                                    <span asp-validation-for="Surname" class="text-danger"></span>
+                                    <input type="text" asp-for="Surname" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>@sharedResource["username"]</label>
+                                    <span asp-validation-for="UserName" class="text-danger"></span>
+                                    <input type="text" asp-for="UserName" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>@sharedResource["emailAddress"]</label>
+                                    <span asp-validation-for="Mail" class="text-danger"></span>
+                                    <input type="email" asp-for="Mail" class="form-control">
+                                </div>
+
+                                @*<div class="form-group">
+                                        <label>Görsel URL</label>
+                                        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                                        <input type="text" asp-for="ImageUrl" class="form-control">
+                                    </div>*@
+
+                                <div class="form-group">
+                                    <label>@sharedResource["password"]</label>
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                    <input type="password" asp-for="Password" class="form-control p_input">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>@sharedResource["passwordAgain"]</label>
+                                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                    <input type="password" asp-for="ConfirmPassword" class="form-control p_input">
+                                </div>
+
+                                <div class="text-danger mt-3" asp-validation-summary="ModelOnly"></div>
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-info btn-block enter-btn">@sharedResource["register"]</button>
+                                </div>
+
+                                <p class="sign-up text-center">@sharedResource["doYouHaveAccount"]<a href="/User/Login/Index/"> @sharedResource["login"]</a></p>
+                                <p class="terms">@sharedResource["termsText"]</p>
+                                <p class="text-center"><a href="#">@sharedResource["terms"]</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @await Html.PartialAsync("/Views/Admin/ScriptPartial.cshtml")
+    @await Component.InvokeAsync("Notyf")
+
+</body>
+</html>

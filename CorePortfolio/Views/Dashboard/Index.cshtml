@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@await Component.InvokeAsync("DashboardStatistics")
+
+@await Component.InvokeAsync("DashboardPortfolios")
+
+<div class="row">
+
+    @await Component.InvokeAsync("DashboardMessages")
+
+    @await Component.InvokeAsync("DashboardPortfolioSlide")
+
+    @await Component.InvokeAsync("DashboardToDoList")
+
+</div>
+<div class="row">
+    @await Component.InvokeAsync("DashboardMap")
+</div>
+
+
+
+

@@ -1,0 +1,30 @@
+﻿<div class="section px-2 px-lg-4 pb-4 pt-5 mb-5" id="contact">
+    <div class="container-narrow">
+        <div class="text-center mb-5">
+            <h2 class="marker marker-center">@sharedResource["contactMe"]</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="bg-light my-2 p-3 pt-2">
+                    <form action="/Default/SendMessage/" method="post">
+                        <div class="form-group my-2">
+                            <label for="name" class="form-label fw-bolder">@sharedResource["yourName"]</label>
+                            <input class="form-control" type="text" id="name" name="Name" required>
+                        </div>
+                        <div class="form-group my-2">
+                            <label for="email" class="form-label fw-bolder">@sharedResource["yourEMail"]</label>
+                            <input class="form-control" type="email" id="email" name="Email" required>
+                        </div>
+                        <div class="form-group my-2">
+                            <label for="message" class="form-label fw-bolder">@sharedResource["yourMessage"]</label>
+                            <textarea class="form-control" style="resize: none;" id="message" name="Content" rows="4" required></textarea>
+                        </div>
+                        <button class="btn btn-primary mt-2" type="submit" href="/Default/Index/">@sharedResource["send"]</button>
+                    </form>
+                </div>
+            </div>
+            @await Component.InvokeAsync("ContactInformationList")
+
+        </div>
+    </div>
+</div>

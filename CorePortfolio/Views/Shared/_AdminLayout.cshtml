@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+  @await Html.PartialAsync("/Views/Admin/HeadPartial.cshtml")
+<body>
+    <div class="container-scroller">
+        @await Html.PartialAsync("/Views/Admin/SidebarPartial.cshtml")
+        <div class="container-fluid page-body-wrapper">
+            @await Html.PartialAsync("/Views/Admin/HeadbarPartial.cshtml")
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    @RenderBody()
+                </div>
+                @await Html.PartialAsync("/Views/Admin/FooterPartial.cshtml")
+            </div>
+        </div>
+    </div>
+    @await Html.PartialAsync("/Views/Admin/ScriptPartial.cshtml")
+    @await Component.InvokeAsync("Notyf")
+
+    @await RenderSectionAsync("Scripts", required: false)   
+</body>
+</html>

@@ -1,0 +1,132 @@
+﻿@using Entities.Concrete
+@model List<Experience>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-md-6">
+    <div class="p-2">
+        <button type="button" id="btngetlistall" class="btn btn-outline-primary">@sharedResource["getDatas"]</button>
+    </div>
+</div>
+
+<div class="p-2" id="listexperience">
+
+</div>
+
+<br />
+
+<div class="p-2" id="listbyidexperience">
+
+</div>
+
+<br />
+
+<div class="col-md-12">
+    <h5>@sharedResource["getByIdPanel"]</h5>
+    <input type="text" class="form-control" id="inpid" placeholder="@sharedResource["enterID"]" />
+    <br />
+    <button type="button" id="btnid" class="btn btn-outline-warning float-lg-right">@sharedResource["getById"]</button>
+</div>
+
+<br />
+
+<div class="col-md-12">
+    <h5>@sharedResource["addPanel"]</h5>
+    <input type="text" class="form-control" id="inpname" placeholder="@sharedResource["title"]" />
+    <br />
+    <input type="text" class="form-control" id="inpdate" placeholder="@sharedResource["date"]" />
+    <br />
+    <button type="button" id="btnadd" class="btn btn-outline-info float-right">@sharedResource["save"]</button>
+</div>
+
+<br />
+
+<br />
+
+<div class="col-md-12">
+    <h5>@sharedResource["deletePanel"]</h5>
+    <input type="text" class="form-control" id="inpexpid" placeholder="@sharedResource["enterID"]" />
+    <br />
+    <button type="button" id="btndelete" class="btn btn-outline-danger float-right">@sharedResource["delete"]</button>
+</div>
+
+@section Scripts
+{
+    <script>
+        $("#btngetlistall").click(function () {
+            $.ajax({
+                contentType: "application/json",
+                dataType: "json",
+                type: "Get",
+                url: "/ExperienceAjax/ListExperience/",
+
+                success: function (funk) {
+                    let values = jQuery.parseJSON(funk);
+                    console.log(values);
+
+                    let htmlst = "<table class=table table-bordered> <tr> <th> ID </th> <th> @sharedResource["title"] </th> <th> @sharedResource["date"] </th> </tr>";
+                    $.each(values, (index, value) => {
+                        htmlst += `<tr> <td>${value.ExperienceID}</td> <td>${value.Name}</td> <td>${value.Date}</td> </tr>`
+                    });
+                    htmlst += "</table>";
+                    $(`#listexperience`).html(htmlst);
+                }
+            });
+        });
+
+        $("#btnadd").click(function () {
+            let values = {
+                Name: $("#inpname").val(),
+                Date: $("#inpdate").val()
+            };
+
+            $.ajax({
+                type: "Post",
+                url: "/ExperienceAjax/AddExperience/",
+                data: values,
+                success: function (funk1) {
+                    let result = jQuery.parseJSON(funk1);
+                    alert(result.Name + " başarılı bir şekilde eklendi!");
+                }
+            });
+        });
+
+        $("#btnid").click(x => {
+            let id = $("#inpid").val();
+
+            $.ajax({
+                contentType: "application/json",
+                dataType: "json",
+                type: "get",
+                url: "/ExperienceAjax/GetById/",
+                data: { ExperienceID: id },
+                success: function (funk2) {
+                    let result = jQuery.parseJSON(funk2);
+                    console.log(result);
+
+                    let htmlstr = ` <table class=table table-hover> <tr> <th>Deneyim ID</th> <td>${result.ExperienceID}</td> </tr> <tr> <th>Deneyim Başlığı</th>
+                    <td>${result.Name}</td> </tr>  <tr> <th>Deneyim Tarihi</th> <td>${result.Date}</td> </tr> </table> `;
+                    $("#listbyidexperience").html(htmlstr);
+                }
+            })
+        })
+
+        $("#btndelete").click(x => {
+            let id = $("#inpexpid").val();
+            $.ajax({
+                url: "/ExperienceAjax/DeleteExperience/" + id,
+                type: "post",
+                contentType: "application/json",
+                dataType: "json",
+                success: function (funk3) {
+                    loadData();
+                    alert("Başarılı bir şekilde silindi!");
+                }
+            });
+        });
+    </script>
+}
+<script src="~/lib/jquery/dist/jquery.js"></script>

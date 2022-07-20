@@ -1,0 +1,33 @@
+﻿@model Entities.Concrete.Skill
+
+@{
+    ViewData["Title"] = "AddSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@using (Html.BeginForm("AddSkill", "Skill", FormMethod.Post))
+{
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">@sharedResource["skillAddPage"]</h4>
+                <form class="forms-sample">
+                    <div class="form-group">
+                        <label>@sharedResource["skillName"]</label>
+                        <input type="text" class="form-control" placeholder="@sharedResource["skillName"]" name="Title">
+                        @Html.ValidationMessageFor(x => x.Title, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["skillValue"]</label>
+                        <input type="text" class="form-control" placeholder="@sharedResource["skillValue"]" name="Value">
+                        @Html.ValidationMessageFor(x => x.Value, "", new { @class = "text-danger" })
+                    </div>
+                    <a href="/Skill/Index/" class="btn btn-dark float-right">@sharedResource["backToSkillList"]</a>
+                    <button type="submit" class="btn btn-info mr-2 float-right">@sharedResource["save"]</button>
+                </form>
+            </div>
+        </div>
+    </div>
+}
+

@@ -1,0 +1,30 @@
+﻿@model Entities.Concrete.SystemRole
+
+@{
+    ViewData["Title"] = "AddSystemUserRole";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("AddSystemRole", "SystemRole", FormMethod.Post))
+{
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">@sharedResource["addRolePage"]</h4>
+                <form class="forms-sample">
+                    <div class="form-group">
+                        <label>@sharedResource["roleName"]</label>
+                        <input type="text" class="form-control" placeholder="@sharedResource["roleName"]" name="Name">
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["normalizeName"]</label>
+                        <input type="text" class="form-control" placeholder="@sharedResource["normalizeName"]" name="NormalizedName">
+                    </div>
+                    <a href="/SystemRole/Index/" class="btn btn-dark float-right">@sharedResource["backToRoleList"]</a>
+                    <button type="submit" class="btn btn-info mr-2 float-right">@sharedResource["save"]</button>
+                </form>
+            </div>
+        </div>
+    </div>
+}
+

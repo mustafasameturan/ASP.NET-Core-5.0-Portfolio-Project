@@ -1,0 +1,45 @@
+﻿@model Entities.Concrete.Experience
+
+@{
+    ViewData["Title"] = "EditExperience";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("EditExperience", "Experience", FormMethod.Post))
+{
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">@sharedResource["experienceEditPage"]</h4>
+                <form class="forms-sample">
+                    <div class="form-group">
+                        @*<label>Deneyim ID</label>*@
+                        @Html.HiddenFor(x => x.ExperienceID, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["title"]</label>
+                        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["date"]</label>
+                        @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["ıconUrl"]</label>
+                        @Html.TextBoxFor(x => x.IconUrl, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["description"]</label>
+                        @Html.TextAreaFor(x => x.Description, 6, 3, new { @class = "form-control" })
+                    </div>
+                    <a href="/Experience/Index/" class="btn btn-dark float-right">@sharedResource["cancel"]</a>
+                    <button type="submit" class="btn btn-info mr-2 float-right" onclick="return confirmEdit()">@sharedResource["save"]</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+}
+
+<script language="javascript">function confirmEdit() { var agree = confirm("@sharedResource["editMessage"]"); if (agree) { return true; } else { return false; } }</script>
+

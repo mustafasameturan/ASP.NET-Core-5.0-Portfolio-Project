@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+@await Html.PartialAsync("/Areas/User/Views/Default/HeadPartial.cshtml")
+
+<body>
+    <div class="container-scroller">
+
+        @await Html.PartialAsync("/Areas/User/Views/Default/NavbarPartial.cshtml")
+
+        <div class="container-fluid page-body-wrapper">
+
+            @await Html.PartialAsync("/Areas/User/Views/Default/SettingsPartial.cshtml")
+
+            @await Html.PartialAsync("/Areas/User/Views/Default/SidebarPartial.cshtml")
+
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    @*<div class="row">*@
+
+                    @RenderBody()
+
+                    @*</div>*@
+                </div>
+
+                @await Html.PartialAsync("/Areas/User/Views/Default/FooterPartial.cshtml")
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+@await Html.PartialAsync("/Areas/User/Views/Default/ScriptPartial.cshtml")
+@await Component.InvokeAsync("Notyf")
+
+</html>

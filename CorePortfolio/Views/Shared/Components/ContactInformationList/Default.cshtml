@@ -1,0 +1,30 @@
+﻿@using Entities.Concrete
+@model List<ContactInformation>
+
+@foreach (var item in Model)
+{
+    <div class="col-md-6" data-aos="fade-left" data-aos-delay="300">
+        <div class="mt-3 px-1">
+            <div class="h5">@item.Header</div>
+            <p>@item.Description </p>
+            <p>@item.Description2</p>
+            <p>Görüşmek Üzere!</p>
+        </div>
+        <div class="mt-53 px-1">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="pb-1">@sharedResource["eMail"]:</div>
+                </div>
+                <div class="col-sm-10">
+                    <div class="pb-1 fw-bolder">@item.Email</div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="pb-1">Discord:</div>
+                </div>
+                <div class="col-sm-10">
+                    <div class="pb-1 fw-bolder">@item.DiscordID</div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

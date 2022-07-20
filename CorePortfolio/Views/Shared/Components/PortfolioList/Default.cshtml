@@ -1,0 +1,28 @@
+﻿@using Entities.Concrete
+@model List<Portfolio>
+
+<div class="section px-2 px-lg-4 pt-5" id="portfolio">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="marker marker-center">@sharedResource["myProjects"] </h2>
+        </div>
+        <div class="grid bp-gallery pb-3" data-aos="zoom-in-up" data-aos-delay="100">
+            <div class="grid-sizer"></div>
+            @foreach (var item in Model)
+            {
+                <div class="grid-item">
+                    <a href="@item.ProjectUrl">
+                        <figure class="portfolio-item">
+                            <img src="@item.ImageUrl" data-bp="@item.BigImageUrl" />
+                            <figcaption>
+                                <h4 class="h5 mb-0">@item.Title</h4>
+                                <div>@item.Tool</div>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+﻿@model Entities.Concrete.SocialMedia
+
+@{
+    ViewData["Title"] = "AddSocialMedia";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("AddSocialMedia", "SocialMedia", FormMethod.Post))
+{
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">@sharedResource["socialMediaAddPage"]</h4>
+                <form class="forms-sample">
+                    <div class="form-group">
+                        <label>@sharedResource["socialMediaPlatform"]</label>
+                        <input type="text" class="form-control" placeholder="@sharedResource["socialMediaPlatform"]Sosyal Medya Platformu" name="Name">
+                        @Html.ValidationMessageFor(x => x.Name, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["socialMediaPlatformIconUrl"]</label>
+                        <input type="text" class="form-control" placeholder="@sharedResource["socialMediaPlatformIconUrl"]" name="PlatformIconUrl">
+                        @Html.ValidationMessageFor(x => x.PlatformIconUrl, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["socialMediaUrl"]</label>
+                        <input type="text" class="form-control" placeholder="@sharedResource["socialMediaUrl"]" name="Url">
+                        @Html.ValidationMessageFor(x => x.Url, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["ıconUrl"]</label>
+                        <input type="text" class="form-control" placeholder="@sharedResource["ıconUrl"]" name="IconUrl">
+                        @Html.ValidationMessageFor(x => x.IconUrl, "", new { @class = "text-danger" })
+                    </div>
+                    <a href="/SocialMedia/Index/" class="btn btn-dark float-right">@sharedResource["backToSocialMediaList"]</a>
+                    <button type="submit" class="btn btn-info mr-2 float-right">@sharedResource["save"]</button>
+                </form>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+
+
+

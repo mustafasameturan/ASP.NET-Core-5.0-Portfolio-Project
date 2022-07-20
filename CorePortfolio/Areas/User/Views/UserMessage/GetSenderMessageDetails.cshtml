@@ -1,0 +1,37 @@
+﻿@model Entities.Concrete.UserMessage
+
+@{
+    ViewData["Title"] = "GetSenderMessageDetails";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card bg-inverse-dark">
+        <div class="card-body">
+            <h4 class="card-title text-warning"><i>@sharedResource["messageDetail"]</i></h4>
+            <form class="forms-sample">
+                <div class="form-group text-white">
+                    @*<label>ID</label>*@
+                    @Html.HiddenFor(x => x.UserMessageID, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group text-white">
+                    <label>@sharedResource["receiverNameSurname"]</label>
+                    @Html.TextBoxFor(x => x.ReceiverName, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group text-white">
+                    <label>@sharedResource["receiverMail"]</label>
+                    @Html.TextBoxFor(x => x.Receiver, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group text-white">
+                    <label>@sharedResource["message"]</label>
+                    @Html.TextAreaFor(x => x.MessageContent, 10, 4, new { @class = "form-control" })
+                </div>
+                <a href="/User/UserMessage/Outbox" class="btn btn-warning float-lg-right">@sharedResource["backToOutbox"]</a>
+            </form>
+        </div>
+    </div>
+</div>
+

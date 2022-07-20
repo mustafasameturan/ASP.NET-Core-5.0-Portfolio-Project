@@ -1,0 +1,59 @@
+﻿@model Entities.Concrete.About
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("EditAbout", "About", FormMethod.Post))
+{
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">@sharedResource["aboutMeEditPage"]</h4>
+                <form class="forms-sample">
+                    <div class="form-group">
+                        @*<label>Proje ID</label>*@
+                        @Html.HiddenFor(x => x.AboutID, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["nameSurname"]</label>
+                        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["age"]</label>
+                        @Html.TextBoxFor(x => x.Age, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["degree"]</label>
+                        @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["eMail"]</label>
+                        @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["address"]</label>
+                        @Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["imageUrl"]</label>
+                        @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["discordID"]</label>
+                        @Html.TextBoxFor(x => x.Discord, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["description"]</label>
+                        @Html.TextAreaFor(x => x.Description, 10, 3, new { @class = "form-control" })
+                    </div>
+                    <a href="/Dashboard/Index/" class="btn btn-dark float-right">@sharedResource["cancel"]</a>
+                    <button type="submit" class="btn btn-info mr-2 float-right" onclick="return confirmEdit()">@sharedResource["save"]</button>
+                </form>
+            </div>
+        </div>
+    </div>
+}
+
+<script language="javascript">function confirmEdit() { var agree = confirm("@sharedResource["editMessage"]"); if (agree) { return true; } else { return false; } }</script>

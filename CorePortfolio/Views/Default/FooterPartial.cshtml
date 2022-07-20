@@ -1,0 +1,19 @@
+﻿<footer class="pt-4 pb-4 text-center bg-light">
+    <div class="container">
+        <div class="my-3">
+            <div class="h4">Mustafa Samet Turan</div>
+            <p>@sharedResource["myTitle"]</p>
+            <div class="social-nav">
+                <nav role="navigation">
+                    <ul class="nav justify-content-center">
+                        @await Component.InvokeAsync("SocialMediaList")
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="text-small text-secondary">
+            <div class="mb-1">&copy; @DateTime.Now.Year @sharedResource["rights"]</div>
+            
+        </div>
+    </div>
+</footer>

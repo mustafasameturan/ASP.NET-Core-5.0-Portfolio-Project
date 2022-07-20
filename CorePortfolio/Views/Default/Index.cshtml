@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!-- upto 2 directory depth-->
+<html lang="en-US">
+
+@await Html.PartialAsync("HeaderPartial") 
+   
+<body id="top">
+
+    @await Html.PartialAsync("NavbarPartial")
+
+    <div class="page-content">
+        <div id="content">
+
+            @await Component.InvokeAsync("MainPageList")
+
+            @await Component.InvokeAsync("AboutList")
+
+            @await Component.InvokeAsync("ServiceList")
+
+            @await Component.InvokeAsync("SkillList")
+
+            @await Component.InvokeAsync("PortfolioList")
+
+            @await Component.InvokeAsync("ExperienceList")
+
+            @await Html.PartialAsync("/Views/Default/SendMessage.cshtml")
+
+            @await Html.PartialAsync("FooterPartial")
+
+        </div>
+    </div>
+    @await Html.PartialAsync("ScriptPartial")
+</body>
+</html>

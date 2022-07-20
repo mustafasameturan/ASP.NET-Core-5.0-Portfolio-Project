@@ -1,0 +1,51 @@
+﻿@model Entities.Concrete.Portfolio
+
+@{
+    ViewData["Title"] = "AddPortfolio";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("AddPortfolio", "Portfolio", FormMethod.Post))
+{
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@sharedResource["projectAddPage"]</h4>
+            <form class="forms-sample">
+                <div class="form-group">
+                    <label>@sharedResource["projectName"]</label>
+                    <input type="text" class="form-control" placeholder="@sharedResource["projectName"]" name="Title">
+                    @Html.ValidationMessageFor(x => x.Title, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["usedTool"]</label>
+                    <input type="text" class="form-control" placeholder="@sharedResource["usedTool"]" name="Tool">
+                    @Html.ValidationMessageFor(x => x.Tool, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["projectUrl"]</label>
+                    <input type="text" class="form-control" placeholder="@sharedResource["projectUrl"]" name="ProjectUrl">
+                    @Html.ValidationMessageFor(x => x.ProjectUrl, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["imageUrl"]</label>
+                    <input type="text" class="form-control" placeholder="@sharedResource["imageUrl"]" name="ImageUrl">
+                    @Html.ValidationMessageFor(x => x.ImageUrl, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["bigImageUrl"]</label>
+                    <input type="text" class="form-control" placeholder="@sharedResource["bigImageUrl"]" name="BigImageUrl">
+                    @Html.ValidationMessageFor(x => x.BigImageUrl, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["usedToolUrl"]</label>
+                    <input type="text" class="form-control" placeholder="@sharedResource["usedToolUrl"]" name="ToolIconUrl">
+                    @Html.ValidationMessageFor(x => x.ToolIconUrl, "", new { @class = "text-danger" })
+                </div>
+                <a href="/Portfolio/Index/" class="btn btn-dark float-right">@sharedResource["backToProjectList"]</a>
+                <button type="submit" class="btn btn-info mr-2 float-right">@sharedResource["save"]</button>
+            </form>
+        </div>
+    </div>
+</div>
+}

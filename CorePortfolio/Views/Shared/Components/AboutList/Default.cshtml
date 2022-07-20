@@ -1,0 +1,55 @@
+﻿@using Entities.Concrete
+@model List<About>
+
+<div class="section pt-4 px-3 px-lg-4" id="about">
+    <div class="container-narrow">
+        @foreach (var item in Model)
+        {
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="h4 my-2">@item.Name</h2>
+                    <p>@item.Description</p>
+                    <div class="row mt-3">
+
+                        <div class="col-sm-2">
+                            <div class="pb-1">@sharedResource["degree"]:</div>
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="pb-1 fw-bolder">@item.Title</div>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <div class="pb-1">@sharedResource["age"]:</div>
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="pb-1 fw-bolder">@item.Age</div>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <div class="pb-1">@sharedResource["eMail"]:</div>
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="pb-1 fw-bolder">@item.Email</div>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <div class="pb-1">Discord:</div>
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="pb-1 fw-bolder">@item.Discord</div>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <div class="pb-1">@sharedResource["address"]:</div>
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="pb-1 fw-bolder">@item.Address</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-5 offset-md-1" data-aos="fade-left" data-aos-delay="100"><img class="avatar img-fluid mt-1" src="@item.ImageUrl" width="300" height="300" alt="Mustafa Samet Turan" /></div>
+            </div>
+        }
+    </div>
+</div>

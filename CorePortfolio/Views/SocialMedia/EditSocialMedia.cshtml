@@ -1,0 +1,44 @@
+﻿@model Entities.Concrete.SocialMedia
+
+@{
+    ViewData["Title"] = "EditSocialMedia";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("EditSocialMedia", "SocialMedia", FormMethod.Post))
+{
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">@sharedResource["socialMediaEditPage"]</h4>
+                <form class="forms-sample">
+                    <div class="form-group">
+                        @*<label>Proje ID</label>*@
+                        @Html.HiddenFor(x => x.SocialMediaID, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["socialMediaPlatform"]</label>
+                        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["socialMediaPlatformIconUrl"]</label>
+                        @Html.TextBoxFor(x => x.PlatformIconUrl, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["socialMediaUrl"]</label>
+                        @Html.TextBoxFor(x => x.Url, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["ıconUrl"]</label>
+                        @Html.TextBoxFor(x => x.IconUrl, new { @class = "form-control" })
+                    </div>
+                    <a href="/SocialMedia/Index/" class="btn btn-dark float-right">@sharedResource["cancel"]</a>
+                    <button type="submit" class="btn btn-info mr-2 float-right" onclick="return confirmEdit()">@sharedResource["save"]</button>
+                </form>
+            </div>
+        </div>
+    </div>
+}
+
+<script language="javascript">function confirmEdit() { var agree = confirm("@sharedResource["editMessage"]"); if (agree) { return true; } else { return false; } }</script>
+

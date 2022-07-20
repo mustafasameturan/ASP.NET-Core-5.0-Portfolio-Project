@@ -1,0 +1,47 @@
+﻿@using Entities.Concrete 
+@model IEnumerable<SystemUser>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@sharedResource["registeredUserList"]</h4>
+            <div class="table-responsive">
+                <table class="table table-striped text-center text-white">
+                    <thead>
+                        <tr>
+                            <th> # </th>
+                            <th> @sharedResource["image"] </th>
+                            <th> @sharedResource["nameSurname"] </th>
+                            <th> @sharedResource["eMail"] </th>
+                            <th> @sharedResource["delete"] </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td> @item.Id </td>
+                                <td class="py-1">
+                                    <img src="~/userimage/@item.ImageUrl" alt="@item.Name" />
+                                </td>
+                                <td> @item.Name @item.Surname </td>
+                                <td> @item.Email </td>                             
+                                <td> <a href="/SystemUser/DeleteSystemUser/@item.Id" class="btn btn-outline-danger" onclick="return confirmDel()">@sharedResource["delete"]</a> </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <br />
+                <a href="/Portfolio/AddPortfolio" class="btn btn-info btn-rounded btn-fw float-right">@sharedResource["totalUser"] : @ViewBag.v1</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script language="javascript">function confirmDel() { var agree = confirm("@sharedResource["deleteMessage"]"); if (agree) { return true; } else { return false; } }</script>
+

@@ -1,0 +1,43 @@
+﻿@model PortfolioCoreProject.Areas.User.Models.UserEditViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@sharedResource["updateProfileInformations"]</h4>
+            <form class="forms-sample" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label>@sharedResource["name"]</label>
+                    <input type="text" asp-for="Name" class="form-control" placeholder="@sharedResource["name"]">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">@sharedResource["surname"]</label>
+                    <input type="text" asp-for="Surname" class="form-control" id="exampleInputEmail3" placeholder="@sharedResource["surname"]">
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["oldPassword"]</label>
+                    <input type="password" class="form-control" placeholder="@sharedResource["oldPassword"]">
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["newPassword"]</label>
+                    <input type="password" asp-for="Password" class="form-control" placeholder="@sharedResource["newPassword"]">
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["newPasswordAgain"]</label>
+                    <input type="password" asp-for="ConfirmPassword" class="form-control" placeholder="@sharedResource["newPasswordAgain"]">
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["uploadImage"]</label>
+                    <br />
+                    <input type="file" asp-for="Image">
+                </div>
+                <a class="btn btn-light float-lg-right" href="/User/Dashboard/Index/">@sharedResource["cancel"]</a>
+                <button type="submit" class="btn btn-primary mr-2 float-lg-right">@sharedResource["update"]</button>
+            </form>
+        </div>
+    </div>
+</div>

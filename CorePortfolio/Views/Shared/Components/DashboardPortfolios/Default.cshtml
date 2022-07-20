@@ -1,0 +1,51 @@
+﻿@using Entities.Concrete
+@model List<Portfolio>
+
+
+<style>
+    .white {
+        color: azure;
+    }
+
+    .mid {
+        text-align: center;
+    }
+</style>
+<div class="row ">
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">@sharedResource["projectList"]</h4>
+                <div class="table-responsive">
+                    <table class="table text-center">
+                        <thead>
+                            <tr>
+                                <th class="mid"> # </th>
+                                <th class="mid"> @sharedResource["usedTool"] </th>
+                                <th class="mid"> @sharedResource["projectName"] </th>
+                                <th class="mid"> @sharedResource["projectUrl"] </th>
+                                <th class="mid"> @sharedResource["completionStatus"] </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr class="text-white">
+                                    <td class="white mid"> @item.PortfolioID </td>
+                                    <td class="white mid">
+                                        <img src="@item.ToolIconUrl" alt="@item.Tool" />
+                                    </td>
+                                    <td class="white mid"> @item.Title </td>
+                                    <td class="white mid"> <a href="@item.ProjectUrl">@sharedResource["goToProject"]</a>  </td>
+                                    <td class="white mid">
+                                        <div class="badge badge-outline-success mid">@sharedResource["completed"]</div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,885 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="aboutMe" xml:space="preserve">
+    <value>Hakkımda</value>
+  </data>
+  <data name="aboutMeEditPage" xml:space="preserve">
+    <value>Hakkımda Düzenleme Sayfası</value>
+  </data>
+  <data name="aboutMeUpdated" xml:space="preserve">
+    <value>Hakkımda başarıyla güncellendi!</value>
+  </data>
+  <data name="add" xml:space="preserve">
+    <value>Ekle</value>
+  </data>
+  <data name="addExperience" xml:space="preserve">
+    <value>Yeni Deneyim Ekle</value>
+  </data>
+  <data name="addNewProject" xml:space="preserve">
+    <value>Yeni Proje Ekle</value>
+  </data>
+  <data name="addNewRole" xml:space="preserve">
+    <value>Yeni Rol Ekle</value>
+  </data>
+  <data name="addNewService" xml:space="preserve">
+    <value>Yeni Servis Ekle</value>
+  </data>
+  <data name="addNewSkill" xml:space="preserve">
+    <value>Yeni Yetenek Ekle</value>
+  </data>
+  <data name="addNewSocialMedia" xml:space="preserve">
+    <value>Yeni Sosyal Medya Hesabı Ekle</value>
+  </data>
+  <data name="addPanel" xml:space="preserve">
+    <value>Ekleme Paneli</value>
+  </data>
+  <data name="address" xml:space="preserve">
+    <value>Adres</value>
+  </data>
+  <data name="addRolePage" xml:space="preserve">
+    <value>Rol Ekleme Sayfası</value>
+  </data>
+  <data name="adminInbox" xml:space="preserve">
+    <value>Admin Gelen Kutusu</value>
+  </data>
+  <data name="adminMessageDeleted" xml:space="preserve">
+    <value>Mesaj başarıyla silindi!</value>
+  </data>
+  <data name="adminMessageError" xml:space="preserve">
+    <value>Mesaj gönderilemedi! Alıcı kısmı boş bırakılamaz!</value>
+  </data>
+  <data name="adminOutbox" xml:space="preserve">
+    <value>Admin Giden Kutusu</value>
+  </data>
+  <data name="adminPanel" xml:space="preserve">
+    <value>Admin Paneli</value>
+  </data>
+  <data name="age" xml:space="preserve">
+    <value>Yaş</value>
+  </data>
+  <data name="anno" xml:space="preserve">
+    <value>Duyuru</value>
+  </data>
+  <data name="announcement" xml:space="preserve">
+    <value>Duyurular</value>
+  </data>
+  <data name="announcementAdded" xml:space="preserve">
+    <value>Duyuru başarıyla yayınlandı!</value>
+  </data>
+  <data name="announcementController" xml:space="preserve">
+    <value>Duyuru Kontrolleri</value>
+  </data>
+  <data name="announcementCount" xml:space="preserve">
+    <value>Duyuru Sayısı</value>
+  </data>
+  <data name="announcementDetail" xml:space="preserve">
+    <value>Duyuru Detayları</value>
+  </data>
+  <data name="announcementError" xml:space="preserve">
+    <value>Duyuru yayınlanamadı!</value>
+  </data>
+  <data name="announcements" xml:space="preserve">
+    <value>Duyurular</value>
+  </data>
+  <data name="announcementsText" xml:space="preserve">
+    <value>Duyuru Paneline Git</value>
+  </data>
+  <data name="announcementTitle" xml:space="preserve">
+    <value>Duyuru Başlığı</value>
+  </data>
+  <data name="announcementType" xml:space="preserve">
+    <value>Duyuru Türü</value>
+  </data>
+  <data name="backToAnnouncement" xml:space="preserve">
+    <value>Duyurulara Dön</value>
+  </data>
+  <data name="backToExperienceList" xml:space="preserve">
+    <value>Deneyim Listesine Dön</value>
+  </data>
+  <data name="backToInbox" xml:space="preserve">
+    <value>Gelen Kutusuna Dön</value>
+  </data>
+  <data name="backToOutbox" xml:space="preserve">
+    <value>Giden Kutusuna Dön</value>
+  </data>
+  <data name="backToProjectList" xml:space="preserve">
+    <value>Proje Listesine Dön</value>
+  </data>
+  <data name="backToRoleList" xml:space="preserve">
+    <value>Rol Listesine Geri Dön</value>
+  </data>
+  <data name="backToServiceList" xml:space="preserve">
+    <value>Servis Listesine Dön</value>
+  </data>
+  <data name="backToSkillList" xml:space="preserve">
+    <value>Yetenek Listesine Dön</value>
+  </data>
+  <data name="backToSocialMediaList" xml:space="preserve">
+    <value>Sosyal Medya Listesine Dön</value>
+  </data>
+  <data name="bigImageUrl" xml:space="preserve">
+    <value>Büyük Görsel URL</value>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="chooseFile" xml:space="preserve">
+    <value>Dosya Seç</value>
+  </data>
+  <data name="chooseUser" xml:space="preserve">
+    <value>Kullanıcı Seçin..</value>
+  </data>
+  <data name="clickNow" xml:space="preserve">
+    <value>Hemen Tıkla!</value>
+  </data>
+  <data name="completed" xml:space="preserve">
+    <value>Tamamlandı</value>
+  </data>
+  <data name="completionStatus" xml:space="preserve">
+    <value>Tamamlanma Durumu</value>
+  </data>
+  <data name="contactInformation" xml:space="preserve">
+    <value>İletişim Bilgileri</value>
+  </data>
+  <data name="contactInformationUpdated" xml:space="preserve">
+    <value>İletişim bilgileri güncellendi!</value>
+  </data>
+  <data name="contactMe" xml:space="preserve">
+    <value>İletişime Geç</value>
+  </data>
+  <data name="contactMessageDeleted" xml:space="preserve">
+    <value>İletişim mesajı başarıyla silindi!</value>
+  </data>
+  <data name="contactMessages" xml:space="preserve">
+    <value>İletişim Mesajları</value>
+  </data>
+  <data name="contactMessagesDetailPage" xml:space="preserve">
+    <value>İletişim Mesajları Detay Sayfası</value>
+  </data>
+  <data name="contactMessageSend" xml:space="preserve">
+    <value>İletişim bilgileri başarıyla gönderildi!</value>
+  </data>
+  <data name="content" xml:space="preserve">
+    <value>İçerik</value>
+  </data>
+  <data name="dark" xml:space="preserve">
+    <value>Koyu</value>
+  </data>
+  <data name="dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="date" xml:space="preserve">
+    <value>Tarih</value>
+  </data>
+  <data name="degree" xml:space="preserve">
+    <value>Ünvan</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>Sil</value>
+  </data>
+  <data name="deleteMessage" xml:space="preserve">
+    <value>Bu icerigi silmek istediginizden emin misiniz?\nBu islem geri alinamaz!</value>
+  </data>
+  <data name="deletePanel" xml:space="preserve">
+    <value>Silme Paneli</value>
+  </data>
+  <data name="description" xml:space="preserve">
+    <value>Açıklama</value>
+  </data>
+  <data name="descriptionOne" xml:space="preserve">
+    <value>Açıklama 1</value>
+  </data>
+  <data name="descriptionTwo" xml:space="preserve">
+    <value>Açıklama 2</value>
+  </data>
+  <data name="details" xml:space="preserve">
+    <value>Detaylar</value>
+  </data>
+  <data name="discordID" xml:space="preserve">
+    <value>Discord ID</value>
+  </data>
+  <data name="documentation" xml:space="preserve">
+    <value>Dökümantasyon hazırlanacak</value>
+  </data>
+  <data name="dontHaveAccount" xml:space="preserve">
+    <value>Hesabın Yok Mu?</value>
+  </data>
+  <data name="doYouHaveAccount" xml:space="preserve">
+    <value>Hesabın var mı?</value>
+  </data>
+  <data name="edit" xml:space="preserve">
+    <value>Düzenle</value>
+  </data>
+  <data name="editContactInformationPages" xml:space="preserve">
+    <value>İletişim Bilgileri Düzenleme Sayfası</value>
+  </data>
+  <data name="editMessage" xml:space="preserve">
+    <value>Bu icerigi düzenlemek istediginizden emin misiniz?\nBu islem geri alinamaz!</value>
+  </data>
+  <data name="eMail" xml:space="preserve">
+    <value>E-Posta</value>
+  </data>
+  <data name="emailAddress" xml:space="preserve">
+    <value>E-Posta Adresi</value>
+  </data>
+  <data name="en" xml:space="preserve">
+    <value>İngilizce</value>
+  </data>
+  <data name="enterID" xml:space="preserve">
+    <value>ID Giriniz</value>
+  </data>
+  <data name="enterTask" xml:space="preserve">
+    <value>görev gir..</value>
+  </data>
+  <data name="enterWord" xml:space="preserve">
+    <value>Aranacak Kelime Girin..</value>
+  </data>
+  <data name="experienceAdded" xml:space="preserve">
+    <value>Deneyim başarıyla eklendi!</value>
+  </data>
+  <data name="experienceAddPage" xml:space="preserve">
+    <value>Deneyim Ekleme Sayfası</value>
+  </data>
+  <data name="experienceCount" xml:space="preserve">
+    <value>Deneyim Sayısı</value>
+  </data>
+  <data name="experienceDeleted" xml:space="preserve">
+    <value>Deneyim başarıyla silindi!</value>
+  </data>
+  <data name="experienceEditPage" xml:space="preserve">
+    <value>Deneyim Düzenleme Sayfası</value>
+  </data>
+  <data name="experienceError" xml:space="preserve">
+    <value>Deneyim eklenemedi!</value>
+  </data>
+  <data name="experienceList" xml:space="preserve">
+    <value>Deneyim Listesi</value>
+  </data>
+  <data name="experienceName" xml:space="preserve">
+    <value>Deneyim Adı</value>
+  </data>
+  <data name="experiences" xml:space="preserve">
+    <value>Deneyimler</value>
+  </data>
+  <data name="experiencesWithAjax" xml:space="preserve">
+    <value>Ajax ile Deneyimler</value>
+  </data>
+  <data name="experienceUpdated" xml:space="preserve">
+    <value>Deneyim başarıyla güncellendi!</value>
+  </data>
+  <data name="forAnnouncement" xml:space="preserve">
+    <value>duyurular için</value>
+  </data>
+  <data name="forgotPassword" xml:space="preserve">
+    <value>Şifremi Unuttum</value>
+  </data>
+  <data name="getById" xml:space="preserve">
+    <value>ID ile Getir</value>
+  </data>
+  <data name="getByIdPanel" xml:space="preserve">
+    <value>ID'ye Göre Getirme Paneli</value>
+  </data>
+  <data name="getDatas" xml:space="preserve">
+    <value>Verileri Getir</value>
+  </data>
+  <data name="goToDetail" xml:space="preserve">
+    <value>Detaya Git</value>
+  </data>
+  <data name="goToProject" xml:space="preserve">
+    <value>Projeye Git!</value>
+  </data>
+  <data name="goToSite" xml:space="preserve">
+    <value>Siteye Git</value>
+  </data>
+  <data name="goToUserPanel" xml:space="preserve">
+    <value>Kullanıcı Paneline Git</value>
+  </data>
+  <data name="image" xml:space="preserve">
+    <value>Fotoğraf</value>
+  </data>
+  <data name="imageUrl" xml:space="preserve">
+    <value>Görsel URL</value>
+  </data>
+  <data name="inbox" xml:space="preserve">
+    <value>Gelen Kutusu</value>
+  </data>
+  <data name="incomingMessageCount" xml:space="preserve">
+    <value>Mesaj Sayısı</value>
+  </data>
+  <data name="languageAdd" xml:space="preserve">
+    <value>Dil desteği eklenecek.</value>
+  </data>
+  <data name="languages" xml:space="preserve">
+    <value>Diller</value>
+  </data>
+  <data name="lastMessages" xml:space="preserve">
+    <value>Son Mesajlar</value>
+  </data>
+  <data name="lastText" xml:space="preserve">
+    <value>Tüm Bildirimleri Gör</value>
+  </data>
+  <data name="light" xml:space="preserve">
+    <value>Açık</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>Giriş Yap</value>
+  </data>
+  <data name="loginError" xml:space="preserve">
+    <value>Hatalı kullanıcı adı veya şifre!</value>
+  </data>
+  <data name="loginSuccess" xml:space="preserve">
+    <value>Giriş başarılı!</value>
+  </data>
+  <data name="logOut" xml:space="preserve">
+    <value>Çıkış Yap</value>
+  </data>
+  <data name="mainPageEdit" xml:space="preserve">
+    <value>Ana Sayfa Düzenleme</value>
+  </data>
+  <data name="mainPageEditPage" xml:space="preserve">
+    <value>Ana Sayfa Düzenleme Sayfası</value>
+  </data>
+  <data name="mainPageUpdated" xml:space="preserve">
+    <value>Ana sayfa güncellendi!</value>
+  </data>
+  <data name="makeAnAnnouncement" xml:space="preserve">
+    <value>Duyuru Yap!</value>
+  </data>
+  <data name="message" xml:space="preserve">
+    <value>Mesaj</value>
+  </data>
+  <data name="messageCount" xml:space="preserve">
+    <value>Mesaj Sayısı</value>
+  </data>
+  <data name="messageDetail" xml:space="preserve">
+    <value>Mesaj Detay Sayfası</value>
+  </data>
+  <data name="messages" xml:space="preserve">
+    <value>Mesajlar</value>
+  </data>
+  <data name="messageSendPanel" xml:space="preserve">
+    <value>Yeni Mesaj Gönderme Paneli</value>
+  </data>
+  <data name="messageSuccess" xml:space="preserve">
+    <value>Mesaj başarıyla gönderildi!</value>
+  </data>
+  <data name="myContact" xml:space="preserve">
+    <value>İletişim</value>
+  </data>
+  <data name="myExperiences" xml:space="preserve">
+    <value>Deneyimlerim</value>
+  </data>
+  <data name="myProjects" xml:space="preserve">
+    <value>Projelerim</value>
+  </data>
+  <data name="myServices" xml:space="preserve">
+    <value>Servislerim</value>
+  </data>
+  <data name="myServicesText" xml:space="preserve">
+    <value>Full Stack Programlama ve Wordpress alanında hizmet sağlayabilirim. Kendimi geliştirmeye devam ediyorum.</value>
+  </data>
+  <data name="mySkills" xml:space="preserve">
+    <value>Yeteneklerim</value>
+  </data>
+  <data name="mySkillsText" xml:space="preserve">
+    <value>Hızlı öğrenen birisiyim ve mevcut yeteneklerim üzerinde kendimi geliştirmeye devam ediyorum.</value>
+  </data>
+  <data name="myTitle" xml:space="preserve">
+    <value>Jr. Yazılım Geliştirici &amp; Öğrenci</value>
+  </data>
+  <data name="name" xml:space="preserve">
+    <value>Ad</value>
+  </data>
+  <data name="nameSurname" xml:space="preserve">
+    <value>Ad-Soyad</value>
+  </data>
+  <data name="navbarColor" xml:space="preserve">
+    <value>Navbar Rengi</value>
+  </data>
+  <data name="newMessage" xml:space="preserve">
+    <value>Yeni Mesaj</value>
+  </data>
+  <data name="newPassword" xml:space="preserve">
+    <value>Yeni Şifreniz</value>
+  </data>
+  <data name="newPasswordAgain" xml:space="preserve">
+    <value>Yeni Şifre Tekrar</value>
+  </data>
+  <data name="newProject" xml:space="preserve">
+    <value>Yeni Proje Oluştur</value>
+  </data>
+  <data name="normalizeName" xml:space="preserve">
+    <value>Normalize Ad</value>
+  </data>
+  <data name="notChooseFile" xml:space="preserve">
+    <value>Dosya seçilmedi</value>
+  </data>
+  <data name="notifications" xml:space="preserve">
+    <value>Bildirimler</value>
+  </data>
+  <data name="oldPassword" xml:space="preserve">
+    <value>Eski Şifreniz</value>
+  </data>
+  <data name="outbox" xml:space="preserve">
+    <value>Giden Kutusu</value>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>Şifre</value>
+  </data>
+  <data name="passwordAgain" xml:space="preserve">
+    <value>Şifre Tekrarı</value>
+  </data>
+  <data name="portfolioAdded" xml:space="preserve">
+    <value>Proje başarıyla eklendi!</value>
+  </data>
+  <data name="portfolioDeleted" xml:space="preserve">
+    <value>Proje başarıyla silindi!</value>
+  </data>
+  <data name="portfolioError" xml:space="preserve">
+    <value>Proje eklenemedi!</value>
+  </data>
+  <data name="portfolioUpdated" xml:space="preserve">
+    <value>Proje başarıyla güncellendi!</value>
+  </data>
+  <data name="profile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="profileError" xml:space="preserve">
+    <value>Profil bilgileri güncellenemedi!</value>
+  </data>
+  <data name="profilePassword" xml:space="preserve">
+    <value>Şifre alanı boş olamaz!</value>
+  </data>
+  <data name="profileUpdated" xml:space="preserve">
+    <value>Profil bilgileri başarıyla güncellendi!</value>
+  </data>
+  <data name="projectAddPage" xml:space="preserve">
+    <value>Proje Ekleme Sayfası</value>
+  </data>
+  <data name="projectEditPage" xml:space="preserve">
+    <value>Proje Düzenleme Sayfası</value>
+  </data>
+  <data name="projectExamine" xml:space="preserve">
+    <value>Projeleri İncele!</value>
+  </data>
+  <data name="projectImages" xml:space="preserve">
+    <value>Proje Fotoğrafları</value>
+  </data>
+  <data name="projectList" xml:space="preserve">
+    <value>Proje Listesi</value>
+  </data>
+  <data name="projectName" xml:space="preserve">
+    <value>Proje Adı</value>
+  </data>
+  <data name="projects" xml:space="preserve">
+    <value>Projeler</value>
+  </data>
+  <data name="projectTest" xml:space="preserve">
+    <value>Proje testleri yapılacak.</value>
+  </data>
+  <data name="projectText" xml:space="preserve">
+    <value>Üstünde çalıştığım ve tamamladığım projeler.,</value>
+  </data>
+  <data name="projectUrl" xml:space="preserve">
+    <value>Proje URL</value>
+  </data>
+  <data name="receiver" xml:space="preserve">
+    <value>Alıcı</value>
+  </data>
+  <data name="receiverMail" xml:space="preserve">
+    <value>Alıcı E-Posta</value>
+  </data>
+  <data name="receiverNameSurname" xml:space="preserve">
+    <value>Alıcı Ad-Soyad</value>
+  </data>
+  <data name="refactor" xml:space="preserve">
+    <value>Kod refactor</value>
+  </data>
+  <data name="register" xml:space="preserve">
+    <value>Kayıt Ol</value>
+  </data>
+  <data name="registeredUserList" xml:space="preserve">
+    <value>Sisteme Kayıtlı Kullanıcı Listesi</value>
+  </data>
+  <data name="registerError" xml:space="preserve">
+    <value>Kayıt başarısız!</value>
+  </data>
+  <data name="registerSuccess" xml:space="preserve">
+    <value>Başarıyla kayıt olundu!</value>
+  </data>
+  <data name="rememberMe" xml:space="preserve">
+    <value>Beni Hatırla</value>
+  </data>
+  <data name="result" xml:space="preserve">
+    <value>Result yapısı eklenecek.</value>
+  </data>
+  <data name="rights" xml:space="preserve">
+    <value>Tüm hakları saklıdır.</value>
+  </data>
+  <data name="roleAdded" xml:space="preserve">
+    <value>Rol başarıyla eklendi!</value>
+  </data>
+  <data name="roleDeleted" xml:space="preserve">
+    <value>Rol başarıyla silindi!</value>
+  </data>
+  <data name="roleName" xml:space="preserve">
+    <value>Rol Adı</value>
+  </data>
+  <data name="roles" xml:space="preserve">
+    <value>Roller</value>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>Kaydet</value>
+  </data>
+  <data name="searchWord" xml:space="preserve">
+    <value>Aranacak kelimeyi girin..</value>
+  </data>
+  <data name="seeMessage" xml:space="preserve">
+    <value>Mesajı Gör</value>
+  </data>
+  <data name="send" xml:space="preserve">
+    <value>Gönder</value>
+  </data>
+  <data name="sendAMessage" xml:space="preserve">
+    <value>bir mesaj gönderdi.</value>
+  </data>
+  <data name="sender" xml:space="preserve">
+    <value>Gönderen</value>
+  </data>
+  <data name="senderMail" xml:space="preserve">
+    <value>Gönderici E-Posta</value>
+  </data>
+  <data name="senderNameSurname" xml:space="preserve">
+    <value>Gönderici Ad-Soyad</value>
+  </data>
+  <data name="sendMessage" xml:space="preserve">
+    <value>Mesaj Gönder</value>
+  </data>
+  <data name="sendNewMessage" xml:space="preserve">
+    <value>Yeni Mesaj Gönder</value>
+  </data>
+  <data name="serviceAdded" xml:space="preserve">
+    <value>Servis başarıyla eklendi!</value>
+  </data>
+  <data name="serviceAddPage" xml:space="preserve">
+    <value>Servis Ekleme Sayfası</value>
+  </data>
+  <data name="serviceCount" xml:space="preserve">
+    <value>Servis Sayısı</value>
+  </data>
+  <data name="serviceDeleted" xml:space="preserve">
+    <value>Servis başarıyla silindi!</value>
+  </data>
+  <data name="serviceEditPage" xml:space="preserve">
+    <value>Servis Düzenleme Sayfası</value>
+  </data>
+  <data name="serviceError" xml:space="preserve">
+    <value>Servis eklenemedi!</value>
+  </data>
+  <data name="serviceList" xml:space="preserve">
+    <value>Servis Listesi</value>
+  </data>
+  <data name="serviceName" xml:space="preserve">
+    <value>Servis Adı</value>
+  </data>
+  <data name="services" xml:space="preserve">
+    <value>Servisler</value>
+  </data>
+  <data name="serviceUpdated" xml:space="preserve">
+    <value>Servis başarıyla güncellendi!</value>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="settingsText" xml:space="preserve">
+    <value>Dashboard düzenlendi.</value>
+  </data>
+  <data name="sidebarColor" xml:space="preserve">
+    <value>Sidebar Rengi</value>
+  </data>
+  <data name="skillAdded" xml:space="preserve">
+    <value>Yetenek başarıyla eklendi!</value>
+  </data>
+  <data name="skillAddPage" xml:space="preserve">
+    <value>Yetenek Ekleme Sayfası</value>
+  </data>
+  <data name="skillCount" xml:space="preserve">
+    <value>Yetenek Sayısı</value>
+  </data>
+  <data name="skillDeleted" xml:space="preserve">
+    <value>Yetenek başarıyla silindi!</value>
+  </data>
+  <data name="skillEditPage" xml:space="preserve">
+    <value>Yetenek Düzenleme Sayfası</value>
+  </data>
+  <data name="skillError" xml:space="preserve">
+    <value>Yetenek eklenemedi!</value>
+  </data>
+  <data name="skillList" xml:space="preserve">
+    <value>Yetenek Listesi</value>
+  </data>
+  <data name="skillName" xml:space="preserve">
+    <value>Yetenek Adı</value>
+  </data>
+  <data name="skillUpdated" xml:space="preserve">
+    <value>Yetenek başarıyla güncellendi!</value>
+  </data>
+  <data name="skillValue" xml:space="preserve">
+    <value>Yetenek Değeri</value>
+  </data>
+  <data name="socialMedia" xml:space="preserve">
+    <value>Sosyal Medya</value>
+  </data>
+  <data name="socialMediaAdded" xml:space="preserve">
+    <value>Sosyal medya başarıyla eklendi!</value>
+  </data>
+  <data name="socialMediaAddPage" xml:space="preserve">
+    <value>Sosyal Medya Ekleme Sayfası</value>
+  </data>
+  <data name="socialMediaDeleted" xml:space="preserve">
+    <value>Sosyal medya silindi!</value>
+  </data>
+  <data name="socialMediaEditPage" xml:space="preserve">
+    <value>Sosyal Medya Düzenleme Sayfası</value>
+  </data>
+  <data name="socialMediaError" xml:space="preserve">
+    <value>Sosyal medya eklenemedi!</value>
+  </data>
+  <data name="socialMediaList" xml:space="preserve">
+    <value>Sosyal Medya Listesi</value>
+  </data>
+  <data name="socialMediaPlatform" xml:space="preserve">
+    <value>Sosyal Medya Platformu</value>
+  </data>
+  <data name="socialMediaPlatformIconUrl" xml:space="preserve">
+    <value>Platform Ikon URL</value>
+  </data>
+  <data name="socialMediaUpdated" xml:space="preserve">
+    <value>Sosyal medya başarıyla güncellendi!</value>
+  </data>
+  <data name="socialMediaUrl" xml:space="preserve">
+    <value>Sosyal Medya URL</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>String1</value>
+  </data>
+  <data name="subject" xml:space="preserve">
+    <value>Konu</value>
+  </data>
+  <data name="surname" xml:space="preserve">
+    <value>Soyad</value>
+  </data>
+  <data name="talents" xml:space="preserve">
+    <value>Yetenekler</value>
+  </data>
+  <data name="terms" xml:space="preserve">
+    <value>Şartlar &amp; Koşullar</value>
+  </data>
+  <data name="termsText" xml:space="preserve">
+    <value>Bir hesap oluşturarak şartlarımızı kabul etmiş oluyorsunuz</value>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>Başlık</value>
+  </data>
+  <data name="today" xml:space="preserve">
+    <value>Bugün</value>
+  </data>
+  <data name="toDoList" xml:space="preserve">
+    <value>Bugün Yapılacaklar</value>
+  </data>
+  <data name="toDoListText" xml:space="preserve">
+    <value>To Do List üzerinde yapman gerekenler var.</value>
+  </data>
+  <data name="totalMessages" xml:space="preserve">
+    <value>Toplam Mesajlar</value>
+  </data>
+  <data name="totalUser" xml:space="preserve">
+    <value>Toplam Kullanıcı Sayısı</value>
+  </data>
+  <data name="tr" xml:space="preserve">
+    <value>Türkçe</value>
+  </data>
+  <data name="update" xml:space="preserve">
+    <value>Güncelle</value>
+  </data>
+  <data name="updateProfileInformations" xml:space="preserve">
+    <value>Profil Bilgilerini Güncelle</value>
+  </data>
+  <data name="uploadImage" xml:space="preserve">
+    <value>Fotoğraf Yükle</value>
+  </data>
+  <data name="usedTool" xml:space="preserve">
+    <value>Kullanılan Araç</value>
+  </data>
+  <data name="usedToolUrl" xml:space="preserve">
+    <value>Kullanılan Araç Ikon URL</value>
+  </data>
+  <data name="userBanned" xml:space="preserve">
+    <value>Kullanıcı sistemden banlandı!</value>
+  </data>
+  <data name="userCount" xml:space="preserve">
+    <value>Kullanıcı Sayısı</value>
+  </data>
+  <data name="userMessageError" xml:space="preserve">
+    <value>Mesaj gönderilemedi! Alıcı kısmı boş bırakılamaz!</value>
+  </data>
+  <data name="userMessageSend" xml:space="preserve">
+    <value>Mesaj başarıyla gönderildi!</value>
+  </data>
+  <data name="username" xml:space="preserve">
+    <value>Kullanıcı Adı</value>
+  </data>
+  <data name="userOperations" xml:space="preserve">
+    <value>Kullanıcı İşlemleri</value>
+  </data>
+  <data name="userPanel" xml:space="preserve">
+    <value>Kullanıcı Paneli</value>
+  </data>
+  <data name="users" xml:space="preserve">
+    <value>Kullanıcılar</value>
+  </data>
+  <data name="value" xml:space="preserve">
+    <value>Değer</value>
+  </data>
+  <data name="weather" xml:space="preserve">
+    <value>tr</value>
+  </data>
+  <data name="welcome" xml:space="preserve">
+    <value>Hoşgeldin</value>
+  </data>
+  <data name="worldMap" xml:space="preserve">
+    <value>Dünya Haritası</value>
+  </data>
+  <data name="yourEMail" xml:space="preserve">
+    <value>E-Posta Adresiniz</value>
+  </data>
+  <data name="yourMessage" xml:space="preserve">
+    <value>Mesajınız</value>
+  </data>
+  <data name="yourName" xml:space="preserve">
+    <value>Adınız</value>
+  </data>
+  <data name="yourSurname" xml:space="preserve">
+    <value>Soyadınız</value>
+  </data>
+  <data name="ıconUrl" xml:space="preserve">
+    <value>Ikon URL</value>
+  </data>
+</root>

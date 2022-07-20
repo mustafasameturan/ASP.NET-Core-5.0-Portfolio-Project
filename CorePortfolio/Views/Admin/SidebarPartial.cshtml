@@ -1,0 +1,157 @@
+﻿<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+        <a class="@*sidebar-brand brand-logo*@" href="/Dashboard/Index/"><img src="~/Portfolio/images/MSTLast.png" alt="logo" width="200" height="50"/></a>
+        <a class="sidebar-brand brand-logo-mini" href="/Dashboard/Index/"><img src="~/Portfolio/images/m_shortcuticon.png" alt="logo" /></a>
+    </div>
+    <ul class="nav">
+
+        @await Component.InvokeAsync("DashboardSidebarAdmin")
+
+        <li class="nav-item nav-category">
+            <span class="nav-link">Navigation</span>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Dashboard/Index/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-speedometer"></i>
+                </span>
+                <span class="menu-title">@sharedResource["dashboard"]</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Default/Index/" target="_blank">
+                <span class="menu-icon">
+                    <i class="mdi mdi-git"></i>
+                </span>
+                <span class="menu-title">@sharedResource["goToSite"]</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/User/UserDashboard/Index/" target="_blank">
+                <span class="menu-icon">
+                    <i class="mdi mdi-account-box"></i>
+                </span>
+                <span class="menu-title">@sharedResource["goToUserPanel"]</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                <span class="menu-icon">
+                    <i class="mdi mdi-message"></i>
+                </span>
+                <span class="menu-title">@sharedResource["messages"]</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="/AdminMessage/AdminMessageSend"> @sharedResource["newMessage"] </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="/AdminMessage/AdminInbox"> @sharedResource["inbox"] </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="/AdminMessage/AdminOutbox"> @sharedResource["outbox"] </a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#user" aria-expanded="false" aria-controls="auth">
+                <span class="menu-icon">
+                    <i class="mdi mdi-account"></i>
+                </span>
+                <span class="menu-title">@sharedResource["userOperations"]</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="user">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="/SystemUser/Index/"> @sharedResource["users"] </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="/SystemRole/Index/"> @sharedResource["roles"] </a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/AdminAnnouncement/Index/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-microphone-outline"></i>
+                </span>
+                <span class="menu-title">@sharedResource["announcements"]</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/MainPage/Index/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-desktop-mac"></i>
+                </span>
+                <span class="menu-title">@sharedResource["mainPageEdit"]</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/About/Index/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-checkbox-multiple-marked-circle"></i>
+                </span>
+                <span class="menu-title">@sharedResource["aboutMe"]</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Experience/Index/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-grease-pencil"></i>
+                </span>
+                <span class="menu-title">@sharedResource["experiences"]</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/ExperienceAjax/Index/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-grease-pencil"></i>
+                </span>
+                <span class="menu-title">@sharedResource["experiencesWithAjax"]</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Portfolio/Index/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-github-circle"></i>
+                </span>
+                <span class="menu-title">@sharedResource["projects"]</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Service/Index/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-calendar-multiple-check"></i>
+                </span>
+                <span class="menu-title">@sharedResource["services"]</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Skill/Index/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-delete-variant"></i>
+                </span>
+                <span class="menu-title">@sharedResource["talents"]</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/SocialMedia/Index/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-instagram"></i>
+                </span>
+                <span class="menu-title">@sharedResource["socialMedia"]</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/ContactInformation/Index/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-cellphone-basic"></i>
+                </span>
+                <span class="menu-title">@sharedResource["contactInformation"]</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/ContactMessage/Index/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-phone-classic"></i>
+                </span>
+                <span class="menu-title">@sharedResource["contactMessages"]</span>
+            </a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,51 @@
+﻿@using Entities.Concrete
+@model List<Experience>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<style>
+    .pad {
+        padding: 10px;
+        float: right;
+    }
+</style>
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@sharedResource["experienceList"] </h4>
+            <div class="table-responsive">
+                <table class="table table-bordered text-center text-white">
+                    <thead>
+                        <tr>
+                            <th> # </th>
+                            <th> @sharedResource["experienceName"]  </th>
+                            <th> @sharedResource["date"]  </th>
+                            <th> @sharedResource["ıconUrl"]  </th>
+                            <th> @sharedResource["edit"]  </th>
+                            <th> @sharedResource["delete"]  </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td> @item.ExperienceID </td>
+                                <td> @item.Name </td>
+                                <td> @item.Date </td>
+                                <td> @item.IconUrl </td>
+                                <td> <a href="/Experience/EditExperience/@item.ExperienceID" class="btn btn-outline-primary">@sharedResource["edit"]</a> </td>
+                                <td> <a href="/Experience/DeleteExperience/@item.ExperienceID" class="btn btn-outline-danger" onclick="return confirmDel()">@sharedResource["delete"]</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <br />
+                <a href="/Experience/AddExperience/" class="btn btn-info btn-rounded btn-fw pad float-right">@sharedResource["addExperience"]</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script language="javascript">function confirmDel() { var agree = confirm("@sharedResource["deleteMessage"]"); if (agree) { return true; } else { return false; } }</script>

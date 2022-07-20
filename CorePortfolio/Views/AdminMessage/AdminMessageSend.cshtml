@@ -1,0 +1,34 @@
+﻿@model Entities.Concrete.UserMessage
+
+@{
+    ViewData["Title"] = "AdminMessageSend";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@sharedResource["messageSendPanel"]</h4>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label>@sharedResource["subject"]</label>
+                    @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["receiver"]</label>
+                    @*@Html.TextBoxFor(x => x.Receiver, new { @class = "form-control" })*@
+                    <div class="form-group">
+                        @await Component.InvokeAsync("AdminMailList")
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["message"]</label>
+                    @Html.TextAreaFor(x => x.MessageContent, 8, 3, new { @class = "form-control" })
+                </div>
+                <a class="btn btn-dark float-lg-right" href="/AdminMessage/AdminInbox">@sharedResource["cancel"]</a>
+                <button type="submit" class="btn btn-info mr-2 float-lg-right">@sharedResource["send"]</button>
+            </form>
+        </div>
+    </div>
+</div>
+

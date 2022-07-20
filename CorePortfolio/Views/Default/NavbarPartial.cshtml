@@ -1,0 +1,31 @@
+﻿<header class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="header-nav" role="navigation">
+        <div class="container">
+            <a class="link-dark navbar-brand site-title mb-0" href="#">
+                <img src="~/Portfolio/images/MSTLast.png" width="200" height="40"/>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto me-2">
+                    <li class="nav-item"><a class="nav-link" href="#about">@sharedResource["aboutMe"]</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">@sharedResource["myServices"]</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">@sharedResource["mySkills"]</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">@sharedResource["myProjects"]</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">@sharedResource["myExperiences"]</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">@sharedResource["myContact"]</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="languages" asp-action="changedefault" asp-route-culture="tr-TR"><span class="flag-icon flag-icon-tur"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"><span>|</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="languages" asp-action="changedefault" asp-route-culture="en-US"><span class="flag-icon flag-icon-gbr"></span></a>
+                    </li>
+                    &nbsp;
+                    <li class="nav-item"><a class="nav-link btn btn-primary" href="/User/Login/Index/" target="_blank">@sharedResource["userPanel"]</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

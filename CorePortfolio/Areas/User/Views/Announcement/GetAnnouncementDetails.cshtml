@@ -1,0 +1,27 @@
+﻿@model Entities.Concrete.Announcement
+
+@{
+    ViewData["Title"] = "GetAnnouncementDetails";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card bg-gradient-warning">
+        <div class="card-body">
+            <h4 class="card-title">@sharedResource["announcementDetail"]</h4>
+            <form class="forms-sample">
+                <div class="form-group">
+                    <label>ID</label>
+                    @Html.TextBoxFor(x => x.AnnouncementID, new { @class = "form-control" })
+                </div>
+                
+                <div class="form-group">
+                    <label>@sharedResource["anno"]</label>
+                    @Html.TextAreaFor(x => x.Content, 10, 4, new { @class = "form-control" })
+                </div>
+                <a href="/User/Announcement/Index/" class="btn btn-info float-lg-right">@sharedResource["backToAnnouncement"]</a>
+            </form>
+        </div>
+    </div>
+</div>

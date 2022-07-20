@@ -1,0 +1,41 @@
+﻿@model Entities.Concrete.Experience
+
+@{
+    ViewData["Title"] = "AddExperience";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("AddExperience", "Experience", FormMethod.Post))
+{
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">@sharedResource["experienceAddPage"]</h4>
+                <form class="forms-sample">
+                    <div class="form-group">
+                        <label>@sharedResource["experienceName"]</label>
+                        <input type="text" class="form-control" placeholder="@sharedResource["experienceName"]" name="Name">
+                        @Html.ValidationMessageFor(x => x.Name, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["date"]</label>
+                        <input type="text" class="form-control" placeholder="@sharedResource["date"]" name="Date">
+                        @Html.ValidationMessageFor(x => x.Date, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["ıconUrl"]</label>
+                        <input type="text" class="form-control" placeholder="@sharedResource["ıconUrl"]" name="IconUrl">
+                        @Html.ValidationMessageFor(x => x.IconUrl, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label>@sharedResource["description"]</label>
+                        <textarea class="form-control" rows="4" name="@sharedResource["description"]" placeholder="Açıklama"></textarea>
+                        @Html.ValidationMessageFor(x => x.Description, "", new { @class = "text-danger" })
+                    </div>
+                    <a href="/Experience/Index/" class="btn btn-dark float-right">@sharedResource["backToExperienceList"]</a>
+                    <button type="submit" class="btn btn-info mr-2 float-right">@sharedResource["save"]</button>
+                </form>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,23 @@
+﻿@using Entities.Concrete
+@model List<Service>
+
+<div class="section px-3 px-lg-4 pt-5" id="services">
+    <div class="container-narrow">
+        <div class="text-center mb-5">
+            <h2 class="marker marker-center">@sharedResource["myServices"]</h2>
+        </div>
+        <div class="text-center">
+            <p class="mx-auto mb-3" style="max-width:600px"><b>@sharedResource["myServicesText"]</b></p>
+        </div>
+        <div class="row py-3">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <img class="mb-2" src="@item.ImageUrl" width="96" height="96" alt="@item.Title" />
+                    <div class="h5">@item.Title</div>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,46 @@
+﻿@model Entities.Concrete.Announcement
+
+@{
+    ViewData["Title"] = "AnnouncementDetails";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@sharedResource["announcementDetail"]</h4>
+            <form class="forms-sample">
+                <div class="form-group">
+                    @*<label>ID</label>*@
+                    @Html.HiddenFor(x => x.AnnouncementID, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["announcementTitle"]</label>
+                    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["announcementType"]</label>
+                    @Html.TextBoxFor(x => x.Status, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["date"]</label>
+                    @Html.TextBoxFor(x => x.Date, "{0: dd-MMMM-yyyy}", new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["name"]</label>
+                    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["surname"]</label>
+                    @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["content"]</label>
+                    @Html.TextAreaFor(x => x.Content, 6, 3, new { @class = "form-control" })
+                </div>
+                <a asp-action="Index" type="submit" class="btn btn-warning mr-2 float-lg-right">@sharedResource["backToAnnouncement"]</a>
+            </form>
+        </div>
+    </div>
+</div>
+

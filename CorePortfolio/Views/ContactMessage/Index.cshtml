@@ -1,0 +1,42 @@
+﻿@using Entities.Concrete
+@model List<ContactMessage>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@sharedResource["inbox"]</h4>
+            <div class="table-responsive">
+                <table class="table table-striped text-center text-white">
+                    <thead>
+                        <tr>
+                            <th> # </th>
+                            <th> @sharedResource["sender"] </th>
+                            <th> @sharedResource["date"] </th>
+                            <th> @sharedResource["seeMessage"]  </th>
+                            <th> @sharedResource["delete"] </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td> @item.ContactMessageID </td>
+                                <td> @item.Name </td>
+                                <td> @(((DateTime)item.Date).ToString("dd-MMMMM-yyyy")) </td>
+                                <td> <a href="/ContactMessage/ContactMessageDetails/@item.ContactMessageID" class="btn btn-outline-light">@sharedResource["seeMessage"]</a> </td>
+                                <td> <a href="/ContactMessage/DeleteContactMessage/@item.ContactMessageID" class="btn btn-outline-danger" onclick="return confirmDel()">@sharedResource["delete"]</a> </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script language="javascript">function confirmDel() { var agree = confirm("@sharedResource["deleteMessage"]"); if (agree) { return true; } else { return false; } }</script>

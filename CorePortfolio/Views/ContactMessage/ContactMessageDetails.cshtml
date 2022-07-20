@@ -1,0 +1,33 @@
+﻿@model Entities.Concrete.ContactMessage
+
+@{
+    ViewData["Title"] = "ContactMessageDetails";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@sharedResource["contactMessagesDetailPage"]</h4>
+            <form class="forms-sample">
+                <div class="form-group">
+                    @*<label>ID</label>*@
+                    @Html.HiddenFor(x => x.ContactMessageID, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["receiver"]</label>
+                    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["date"]</label>
+                    @Html.TextBoxFor(x => x.Date, "{0: dd-MMMM-yyyy}", new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["description"]</label>
+                    @Html.TextAreaFor(x => x.Content, 6, 3, new { @class = "form-control" })
+                </div>
+                <a asp-action="Index" type="submit" class="btn btn-warning mr-2 float-lg-right">@sharedResource["contactMessages"]</a>
+            </form>
+        </div>
+    </div>
+</div>

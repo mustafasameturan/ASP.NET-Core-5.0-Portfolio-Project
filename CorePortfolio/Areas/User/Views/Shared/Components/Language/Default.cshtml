@@ -1,0 +1,33 @@
+﻿<li class="nav-item dropdown">
+    <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+        <i class="icon-flag mx-0"></i>
+    </a>
+
+    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+        <p class="mb-0 font-weight-bolder float-left dropdown-header">@sharedResource["languages"]</p>
+        <a class="dropdown-item preview-item" asp-controller="languagesUser" asp-action="change" asp-route-culture="tr-TR">
+            <div class="preview-thumbnail">
+                <div class="preview-icon bg-dark rounded-circle">
+                    <span class="flag-icon flag-icon-tur"></span>
+                </div>
+            </div>
+            <div class="preview-item-content">
+                <p class="font-weight-bolder mb-1">
+                    @sharedResource["tr"]
+                </p>
+            </div>
+        </a>
+        <a class="dropdown-item preview-item" asp-controller="languagesUser" asp-action="change" asp-route-culture="en-US">
+            <div class="preview-thumbnail">
+                <div class="preview-icon bg-dark rounded-circle">
+                    <span class="flag-icon flag-icon-gbr"></span>
+                </div>
+            </div>
+            <div class="preview-item-content">
+                <p class="font-weight-bolder mb-1">
+                    @sharedResource["en"]
+                </p>
+            </div>
+        </a>
+    </div>
+</li>

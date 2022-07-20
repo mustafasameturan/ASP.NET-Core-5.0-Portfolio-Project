@@ -1,0 +1,47 @@
+﻿@using Entities.Concrete
+@model List<UserMessage>
+
+@{
+    ViewData["Title"] = "AdminInbox";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@sharedResource["inbox"]</h4>
+            <div class="table-responsive">
+                <table class="table table-striped text-center text-white">
+                    <thead>
+                        <tr>
+                            <th class="edit"> # </th>
+                            <th class="edit"> @sharedResource["receiver"] </th>
+                            <th class="edit"> @sharedResource["subject"] </th>
+                            <th class="edit"> @sharedResource["date"] </th>
+                            <th class="edit"> @sharedResource["seeMessage"] </th>
+                            <th class="edit"> @sharedResource["delete"] </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="edit"> @item.UserMessageID </td>
+                                <td class="edit"> @item.SenderName </td>
+                                <td class="edit"> @item.Subject </td>
+                                <td class="edit"> @(((DateTime)item.Date).ToString("dd-MMMMM-yyyy")) </td>
+                                <td class="edit"> <a href="/AdminMessage/AdminMessageDetails/@item.UserMessageID" class="btn btn-outline-light">@sharedResource["seeMessage"]</a> </td>
+                                <td class="edit"> <a href="/AdminMessage/AdminInboxMessageDelete/@item.UserMessageID" class="btn btn-outline-danger" onclick="return confirmDel()">@sharedResource["delete"]</a> </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <br />
+                <a href="/AdminMessage/AdminMessageSend" class="btn btn-info btn-rounded btn-fw float-lg-right">@sharedResource["newMessage"]</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script language="javascript">function confirmDel() { var agree = confirm("@sharedResource["deleteMessage"]"); if (agree) { return true; } else { return false; } }</script>
+

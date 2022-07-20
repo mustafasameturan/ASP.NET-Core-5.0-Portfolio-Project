@@ -1,0 +1,38 @@
+﻿@using Entities.Concrete
+@model List<Portfolio> 
+
+<div class="col-md-6 col-xl-4 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@sharedResource["projectImages"]</h4>
+            <div class="owl-carousel owl-theme full-width owl-carousel-dash portfolio-carousel" id="owl-carousel-basic">
+                @foreach (var item in Model)
+                {
+                    <div class="item">
+                        <img src="@item.BigImageUrl" width="600" height="300" alt="">
+                    </div>
+                }
+
+            </div>
+            <div class="d-flex py-4">
+                <div class="preview-list w-100">
+                    <div class="preview-item p-0">
+                        <div class="preview-thumbnail">
+                            <img src="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/images/admin/admin-icon.png" class="rounded-circle" alt="">
+                        </div>
+                        <div class="preview-item-content d-flex flex-grow">
+                            <div class="flex-grow">
+                                <div class="d-flex d-md-block d-xl-flex justify-content-between">
+                                    <h6 class="preview-subject">Mustafa Samet Turan</h6>
+                                    <p class="text-muted text-small">@DateTime.Now.ToShortDateString()</p>
+                                </div>
+                                <p class="text-muted" style="font-size:13px;">@sharedResource["projectText"]</p>
+                                <a href="/Portfolio/Index"><p>@sharedResource["projectExamine"]</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
