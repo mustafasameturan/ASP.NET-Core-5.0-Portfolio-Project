@@ -138,7 +138,7 @@ namespace CorePortfolio
             {
                 endpoints.MapControllerRoute(
                   name: "areas",
-                  pattern: "{area:exists}/{controller=Home}/{action=Default}/{id?}"
+                  pattern: "{area:exists}/{controller=Default}/{action=Index}/{id?}"
                 );
             });
         }

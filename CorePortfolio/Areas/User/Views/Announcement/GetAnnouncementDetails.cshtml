@@ -12,16 +12,28 @@
             <h4 class="card-title">@sharedResource["announcementDetail"]</h4>
             <form class="forms-sample">
                 <div class="form-group">
-                    <label>ID</label>
-                    @Html.TextBoxFor(x => x.AnnouncementID, new { @class = "form-control" })
+                    @*<label>ID</label>*@
+                    @Html.HiddenFor(x => x.AnnouncementID, new { @class = "form-control" })
                 </div>
-                
                 <div class="form-group">
-                    <label>@sharedResource["anno"]</label>
+                    <label class="font-weight-bold">@sharedResource["name"]</label>
+                    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold">@sharedResource["surname"]</label>
+                    @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold">@sharedResource["date"]</label>
+                    @Html.TextBoxFor(x => x.Date, "{0: dd-MMMM-yyyy}", new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold">@sharedResource["anno"]</label>
                     @Html.TextAreaFor(x => x.Content, 10, 4, new { @class = "form-control" })
                 </div>
-                <a href="/User/Announcement/Index/" class="btn btn-info float-lg-right">@sharedResource["backToAnnouncement"]</a>
             </form>
         </div>
+        <a href="/User/UserMessage/SendMessage/" class="btn btn-primary float-lg-right">@sharedResource["sendMessage"]</a>
+        <a href="/User/Announcement/Index/" class="btn btn-info float-lg-right">@sharedResource["backToAnnouncement"]</a>
     </div>
 </div>

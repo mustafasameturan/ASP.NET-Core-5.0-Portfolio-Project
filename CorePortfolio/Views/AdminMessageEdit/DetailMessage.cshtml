@@ -1,0 +1,27 @@
+﻿@model Entities.Concrete.UserMessage
+
+@{
+    ViewData["Title"] = "DetailMessage";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@sharedResource["announcementDetail"]</h4>
+            <form class="forms-sample">
+                <div class="form-group">
+                    @*<label>ID</label>*@
+                    @Html.HiddenFor(x => x.UserMessageID, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["content"]</label>
+                    @Html.TextAreaFor(x => x.MessageContent, 10,3, new { @class = "form-control" })
+                </div>
+                <a asp-action="Index" type="submit" class="btn btn-warning mr-2 float-lg-right">@sharedResource["backToInbox"]</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+
