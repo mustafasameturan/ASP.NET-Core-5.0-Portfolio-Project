@@ -21,17 +21,17 @@
 ☑️ Kullanıcı Arayüzü -> https://www.bootstrapdash.com/product/skydash-admin-template <br>
 
 ## Kullanılan Teknolojiler ve Yapılar
-☑️ Katmanlı Mimari
-☑️ Generic Yapılar
-☑️ Entity Framework
-☑️ Autfac -> IoC Container
-☑️ MVC
-☑️ Migrations
-☑️ Fluent Validation
-☑️ Identity
-☑️ Area
-☑️ Toastr
-☑️ MSSQL
+☑️ Katmanlı Mimari <br>
+☑️ Generic Yapılar <br>
+☑️ Entity Framework <br>
+☑️ Autfac -> IoC Container <br>
+☑️ MVC <br>
+☑️ Migrations <br>
+☑️ Fluent Validation <br>
+☑️ Identity <br>
+☑️ Area <br>
+☑️ Toastr <br>
+☑️ MSSQL <br>
 
 ## Katmanlar
 🗃 [Business](https://github.com/mustafasameturan/ASP.NET-Core-5.0-Portfolio-Project/tree/master/Business) <br>
