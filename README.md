@@ -32,6 +32,7 @@
 ☑️ Area <br>
 ☑️ Toastr <br>
 ☑️ MSSQL <br>
+☑️ Türkçe-İngilizce Dil Desteği <br>
 
 ## Katmanlar
 🗃 [Business](https://github.com/mustafasameturan/ASP.NET-Core-5.0-Portfolio-Project/tree/master/Business) <br>
