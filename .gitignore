@@ -16,6 +16,10 @@
 # Mono auto generated files
 mono_crash.*
 
+# Theme
+wwwroot/lib 
+
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
