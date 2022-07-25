@@ -97,6 +97,9 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
+
+# Deneme
+wwwroot/
 *.html
 *.css
 *.js
