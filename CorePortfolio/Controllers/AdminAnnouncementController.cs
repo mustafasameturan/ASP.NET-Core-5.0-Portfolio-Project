@@ -34,7 +34,7 @@ namespace PortfolioCoreProject.Controllers
         {
             var value = _announcementService.GetById(id);
             _announcementService.Delete(value);
-            _notyfService.Success("Duyuru silindi.");
+            _notyfService.Success(_sharedLocalizer["announcementDeleted"].ToString());
             return LocalRedirect("/AdminAnnouncement/Index/");
 
         }

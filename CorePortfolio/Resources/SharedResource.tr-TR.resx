@@ -189,6 +189,9 @@
   <data name="announcementCount" xml:space="preserve">
     <value>Duyuru Sayısı</value>
   </data>
+  <data name="announcementDeleted" xml:space="preserve">
+    <value>Duyuru silindi!</value>
+  </data>
   <data name="announcementDetail" xml:space="preserve">
     <value>Duyuru Detayları</value>
   </data>
@@ -836,6 +839,12 @@
   </data>
   <data name="userCount" xml:space="preserve">
     <value>Kullanıcı Sayısı</value>
+  </data>
+  <data name="userMessageControl" xml:space="preserve">
+    <value>Kullanıcı Mesaj Kontrol</value>
+  </data>
+  <data name="userMessageDeleted" xml:space="preserve">
+    <value>Kullanıcı mesajı silindi!</value>
   </data>
   <data name="userMessageError" xml:space="preserve">
     <value>Mesaj gönderilemedi! Alıcı kısmı boş bırakılamaz!</value>

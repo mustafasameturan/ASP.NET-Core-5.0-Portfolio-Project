@@ -15,8 +15,12 @@
                     @Html.HiddenFor(x => x.ContactMessageID, new { @class = "form-control" })
                 </div>
                 <div class="form-group">
-                    <label>@sharedResource["receiver"]</label>
+                    <label>@sharedResource["sender"]</label>
                     @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label>@sharedResource["email"]</label>
+                    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
                 </div>
                 <div class="form-group">
                     <label>@sharedResource["date"]</label>

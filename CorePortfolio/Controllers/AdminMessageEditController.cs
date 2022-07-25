@@ -7,6 +7,7 @@ using Business.Abstract;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 
 namespace PortfolioCoreProject.Controllers
 {
@@ -15,11 +16,13 @@ namespace PortfolioCoreProject.Controllers
     {
         private IUserMessageService _userMessageService;
         private readonly INotyfService _notyfService;
+        private readonly IStringLocalizer<SharedResource> _sharedLocalizer;
 
-        public AdminMessageEditController(INotyfService notyfService, IUserMessageService userMessageService)
+        public AdminMessageEditController(INotyfService notyfService, IUserMessageService userMessageService, IStringLocalizer<SharedResource> sharedLocalizer)
         {
             _notyfService = notyfService;
             _userMessageService = userMessageService;
+            _sharedLocalizer = sharedLocalizer;
         }
 
         public IActionResult Index()
@@ -32,7 +35,7 @@ namespace PortfolioCoreProject.Controllers
         {
             var value = _userMessageService.GetById(id);
             _userMessageService.Delete(value);
-            _notyfService.Success("silindi");
+            _notyfService.Success(_sharedLocalizer["userMessageDeleted"].ToString());
             return LocalRedirect("/AdminMessageEdit/Index/");
         }
 

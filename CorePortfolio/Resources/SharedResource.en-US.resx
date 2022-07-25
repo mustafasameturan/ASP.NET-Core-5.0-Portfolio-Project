@@ -189,6 +189,9 @@
   <data name="announcementCount" xml:space="preserve">
     <value>Announcement Count</value>
   </data>
+  <data name="announcementDeleted" xml:space="preserve">
+    <value>Announcement deleted!</value>
+  </data>
   <data name="announcementDetail" xml:space="preserve">
     <value>Announcement Details</value>
   </data>
@@ -836,6 +839,12 @@
   </data>
   <data name="userCount" xml:space="preserve">
     <value>User Count</value>
+  </data>
+  <data name="userMessageControl" xml:space="preserve">
+    <value>User Message Control</value>
+  </data>
+  <data name="userMessageDeleted" xml:space="preserve">
+    <value>User message deleted!</value>
   </data>
   <data name="userMessageError" xml:space="preserve">
     <value>Message could not be sent! The receiver field cannot be left blank!</value>
