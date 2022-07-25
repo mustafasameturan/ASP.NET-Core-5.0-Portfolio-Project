@@ -1,4 +1,6 @@
 <h1 align="center">🚀🚀ASP.NET Core 5.0 ile Kişisel Web Site Projesi🚀🚀</h1>
+<h1 align="center">https://www.mustafasameturan.site</h1>
+
 
 ## 🚀İçindekiler
 - [Tanıtım](#tanıtım)
@@ -11,7 +13,7 @@
 &nbsp;&nbsp;&nbsp;Proje kişinin, hakkındaki bilgileri, servislerini, yeteneklerini, projelerini, deneyimlerini ve iletişim bilgilerini yayınlama amacı ile yapılmıştır. Siteye dışardan erişen kişi kayıt olabilir. Kayıt olduğunda duyurularını yayınlayabileceği ve sistemdeki diğer kayıtlı kullanılara mesaj atabileceği bir sistem oluşturumuştur. Sitenin bir admin paneli de mevcuttur. Bu panel ile "admin" kişisi bilgilere ekleme, çıkarma ve güncelleme yapabilir. Ayrıca kullanıcıların mesajlarını ve duyurularını gözlemleyip, silebilir. "admin" kişisi kullanıcıları sistemden banlayabilir. 
 
 ## Proje Videosu
-
+☑️ https://youtu.be/hzyZplYc_0o
 
 ## Proje Tema Dosyaları
 ☑️ Arayüz -> https://templateflip.com/templates/super-folio/ <br>
@@ -19,17 +21,18 @@
 ☑️ Kullanıcı Arayüzü -> https://www.bootstrapdash.com/product/skydash-admin-template <br>
 
 ## Kullanılan Teknolojiler ve Yapılar
-☑️ Katmanlı Mimari
-☑️ Generic Yapılar
-☑️ Entity Framework
-☑️ Autfac -> IoC Container
-☑️ MVC
-☑️ Migrations
-☑️ Fluent Validation
-☑️ Identity
-☑️ Area
-☑️ Toastr
-☑️ MSSQL
+☑️ Katmanlı Mimari <br>
+☑️ Generic Yapılar <br>
+☑️ Entity Framework <br>
+☑️ Autfac -> IoC Container <br>
+☑️ MVC <br>
+☑️ Migrations <br>
+☑️ Fluent Validation <br>
+☑️ Identity <br>
+☑️ Area <br>
+☑️ Toastr <br>
+☑️ MSSQL <br>
+☑️ Türkçe-İngilizce Dil Desteği <br>
 
 ## Katmanlar
 🗃 [Business](https://github.com/mustafasameturan/ASP.NET-Core-5.0-Portfolio-Project/tree/master/Business) <br>
