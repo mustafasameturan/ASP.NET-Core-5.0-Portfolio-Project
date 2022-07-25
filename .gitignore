@@ -99,11 +99,7 @@ StyleCopReport.xml
 *.scc
 
 # Deneme
-wwwroot/
-*.html
-*.css
-*.js
-*.json
+\CorePortfolio\CorePortfolio\wwwroot\corona-free-dark-bootstrap-admin-template-1.0.0
 
 
 # Chutzpah Test files
