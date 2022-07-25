@@ -361,3 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+/wwwroot/corona-free-dark-bootstrap-admin-template-1.0.0/
+/wwwroot/flag-icons/
+/wwwroot/Portfolio/
+/wwwroot/skydash/
